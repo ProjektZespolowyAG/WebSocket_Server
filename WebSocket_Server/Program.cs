@@ -14,7 +14,7 @@ public class TestService : WebSocketBehavior
 
     protected override void OnError(WebSocketSharp.ErrorEventArgs e)
     {
-        // do nothing
+        // do nothing romek
     }
 } //Test nowy
 
