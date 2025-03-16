@@ -16,7 +16,7 @@ public class TestService : WebSocketBehavior
     {
         // do nothing
     }
-}
+} //Test
 
 public class Program
 {

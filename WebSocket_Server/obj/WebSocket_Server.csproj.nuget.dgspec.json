@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\roman\\RiderProjects\\WebSocket_Server\\WebSocket_Server\\WebSocket_Server.csproj": {}
+    "C:\\Users\\s104\\Source\\Repos\\WebSocket_Server\\WebSocket_Server\\WebSocket_Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\roman\\RiderProjects\\WebSocket_Server\\WebSocket_Server\\WebSocket_Server.csproj": {
+    "C:\\Users\\s104\\Source\\Repos\\WebSocket_Server\\WebSocket_Server\\WebSocket_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\roman\\RiderProjects\\WebSocket_Server\\WebSocket_Server\\WebSocket_Server.csproj",
+        "projectUniqueName": "C:\\Users\\s104\\Source\\Repos\\WebSocket_Server\\WebSocket_Server\\WebSocket_Server.csproj",
         "projectName": "WebSocket_Server",
-        "projectPath": "C:\\Users\\roman\\RiderProjects\\WebSocket_Server\\WebSocket_Server\\WebSocket_Server.csproj",
-        "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\roman\\RiderProjects\\WebSocket_Server\\WebSocket_Server\\obj\\",
+        "projectPath": "C:\\Users\\s104\\Source\\Repos\\WebSocket_Server\\WebSocket_Server\\WebSocket_Server.csproj",
+        "packagesPath": "C:\\Users\\s104\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\s104\\Source\\Repos\\WebSocket_Server\\WebSocket_Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\s104\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
