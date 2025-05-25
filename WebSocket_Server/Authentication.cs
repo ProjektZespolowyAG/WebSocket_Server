@@ -23,29 +23,35 @@ public class Authentication
                 }
             }
 
-            foreach (var user in _storage)
-            {
-                Console.WriteLine("User: " + user.Key + ", Password: " + user.Value);
-            }
-            
+            Console.WriteLine($"Loaded {_storage.Count} users from storage");
             return;
         }
         
         var fileStream = new FileStream(StorageFileName, FileMode.Create);
         fileStream.Close();
         File.WriteAllText(StorageFileName, "[]");
+        Console.WriteLine("Created new storage.json file");
     }
 
     private void SaveToFile()
     {
-        var storageAsList = _storage.Select(user => new Dictionary<string, string> { { "name", user.Key }, { "password", user.Value } }).ToList();
+         var storageAsList = _storage.Select(user => new Dictionary<string, string> 
+        { 
+            { "name", user.Key }, 
+            { "password", user.Value } 
+        }).ToList();
+        
         var jsonString = JsonSerializer.Serialize(storageAsList, new JsonSerializerOptions { WriteIndented = true });
         File.WriteAllText(StorageFileName, jsonString);
-        
     }
 
     public Response SignIn(string name, string password)
     {
+        if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(password))
+        {
+            return new Response(false, "Username and password are required!");
+        }
+
         var isUserInStorage = _storage.TryGetValue(name, out var storagePassword);
 
         if (!isUserInStorage)
@@ -53,11 +59,23 @@ public class Authentication
             return new Response(false, "User does not exist!");
         }
         
-        return storagePassword == password ? new Response(true, "Logged in!") : new Response(false, "Credentials mismatch!");
+        return storagePassword == password ? 
+            new Response(true, "Logged in!") : 
+            new Response(false, "Credentials mismatch!");
     }
 
     public Response SignUp(string name, string password)
     {
+        if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(password))
+        {
+            return new Response(false, "Username and password are required!");
+        }
+
+        if (password.Length < 3)
+        {
+            return new Response(false, "Password must be at least 3 characters long!");
+        }
+
         var isUserInStorage = _storage.ContainsKey(name);
 
         if (isUserInStorage)
