@@ -89,8 +89,14 @@ public class Authentication
     }
 }
 
-public class Response(bool success, string message)
+public class Response
 {
-    public bool Success { get; set; } = success;
-    public string Message { get; set; } = message;
+    public bool Success { get; set; }
+    public string Message { get; set; }
+ 
+    public Response(bool success, string message)
+    {
+        Success = success;
+        Message = message;
+    }
 }
